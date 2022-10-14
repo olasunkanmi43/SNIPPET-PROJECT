@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<body>
+        <a href="/">Add User</a>
+        <a href="/viewuser">View Users</a>
+        <hr>
+
+        <h3>User Records</h3>
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>State of Origin</th>
+                <th>Upload Image</th>
+            </tr>
+            <tr>
+        <% record.forEach(function(records) { %>
+            <td<a href="/viewsuser/<%= records._id %>"></a><%= records.fn + " " + records.ln %></a></td>
+            <td><%= records.email %></td>
+            <td><%= records.gender %></td>
+            <td><%= records.stateOfOrigin %></td>
+        
+        </tr>
+        <% }) %>
+           
+        </table>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    <a href="/">Add User</a>
+    <a href="/view">View Users</a>
+    <hr>
+
+    <h3>User Details</h3>
+
+    <% record.forEach((recs) => { %>
+
+    <p>Name: <strong><%= recs.fn + " "+recs.ln %></strong></p>
+    <p>Email: <strong><%= recs.email %></strong></p>
+    <p>Gender: <strong><%= recs.gender %></strong></p>
+    <p>State Of Origin: <strong><%= recs.stateOfOrigin %></strong></p>
+    
+
+    <% }) %>
+
+</body>
+</html>
